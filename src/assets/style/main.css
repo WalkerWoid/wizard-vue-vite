@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+html, body {
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 400;
+    min-height: 100vh;
+    scrollbar-gutter: stable;
+    color: var(--color-main)
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+:root {
+    --transition: .4s;
+    --color-green: rgb(47,203,90);
+    --color-block-bg: rgb(248,248,248);
+    --color-main: rgb(51,51,51);
+    --color-gray: rgb(204,204,204);
+    --color-button: rgb(152,171,186);
+    --color-border: rgb(221,221,221);
+    --gap: 15px;
+    --radius: 4px;
+    --color-block-text: rgb(90,90,95);
+}
+#app {
+    width: 100%;
+}
+
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+picture {
+    display: flex;
+}
+picture:not(.picture__map) > img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+a, span, p, li {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    line-height: 120%;
+    font-family: inherit;
+    font-weight: inherit;
+}
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.steps__container, .subSteps__container,
+.step, .subStep,
+.block__left, .block__text,
+.block__right, .form__block, .container  {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap) 0;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+hr {
+    background-color: var(--color-border);
+}
+
+label {
+    align-items: center;
+    display: flex;
+}
+input {
+
+}
+
+.label__option {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-gray);
+    min-height: 35px;
+    border-radius: var(--radius);
+    position: relative;
+    font-size: 14px;
+    color: var(--color-block-text)
+}
+.label__option input {
+    display: none;
+}
+.label__option .checked {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+}
+.label__option .checked img {
+    display: none;
+}
+.label__option img {
+    width: 12px;
+    margin-right: -6px;
+}
+.label__option input:checked + .checked img {
+    display: block;
+}
+
+select {
+    width: 100%;
+    min-height: 35px;
+    padding: 10px;
+}
+
+

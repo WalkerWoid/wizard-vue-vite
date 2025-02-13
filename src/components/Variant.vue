@@ -172,4 +172,19 @@ const variantPriceSelect = computed(() => {
   background-color: var(--color-green)
 }
 
+@media screen and (max-width: 768px) {
+  .subStep {
+    flex-direction: column;
+  }
+  .block__right {
+    padding: var(--gap);
+    flex: auto;
+  }
+  .block__text {
+    border: none;
+  }
+  .price {
+    align-self: center;
+  }
+}
 </style>

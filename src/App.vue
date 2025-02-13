@@ -94,4 +94,10 @@ watch(() => inputSelect.value, (newSelect, oldSelect) => {
   justify-content: space-between;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .result {
+    font-size: 20px;
+  }
+}
 </style>

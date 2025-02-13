@@ -3,12 +3,12 @@ import { defineStore } from 'pinia'
 import { dataString } from "@/data.ts"
 
 export const useWizardState = defineStore('mainState', () => {
-    const data: Object = ref(JSON.parse(dataString))
-    const currentStep: Object = ref(1)
-    const result: Object = ref(0)
+    const data = ref(JSON.parse(dataString))
+    const currentStep = ref(1)
+    const result = ref(0)
 
     function clearCheckedVariants(step: Number) {
-        data.value[step-1].variants.forEach(variant => {
+        data.value[Number(step)-1].variants.forEach((variant: Object) => {
             variant.chosen = false
         })
     }
@@ -31,9 +31,9 @@ export const useWizardState = defineStore('mainState', () => {
 
     watch(data, (newData, oldData) => {
         result.value = 0
-        newData.forEach(dataItem => {
+        newData.forEach((dataItem: Object) => {
             if (dataItem.selected) {
-                result.value = dataItem.selected.reduce((acc, selectedItem) => acc + selectedItem.price, result.value)
+                result.value = dataItem.selected.reduce((acc: number, selectedItem: Object) => acc + selectedItem.price, result.value)
             }
         })
         console.log(newData)

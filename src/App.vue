@@ -17,7 +17,6 @@ provide('inputPrice', inputPrice)
 
 watch(() => inputCheckbox.value, (newCheck, oldCheck) => {
   inputPrice[`step${currentStep.value}Check`] = inputCheckbox.value
-  console.log(newCheck)
 
   if (newCheck.length === 0) {
     delete data.value[currentStep.value-1].selected

@@ -36,7 +36,6 @@ export const useWizardState = defineStore('mainState', () => {
                 result.value = dataItem.selected.reduce((acc: number, selectedItem: Object) => acc + selectedItem.price, result.value)
             }
         })
-        console.log(newData)
     }, {deep: true})
 
     return {
